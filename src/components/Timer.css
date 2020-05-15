@@ -1,0 +1,22 @@
+.clock {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.warning {
+  color: red;
+}
+
+.blinking {
+  color: red;
+  animation: blinkingAnimation 0.5s infinite;
+}
+
+@keyframes blinkingAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
