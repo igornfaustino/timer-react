@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import './Timer.css';
 import { formatNumberToTime } from '../utils/format';
 
-const Timer = ({ initialTimeSeconds, currentTimeSeconds }) => {
+const Timer = ({ initialTimeSeconds = 0, currentTimeSeconds = 0 }) => {
   const message = useMemo(() => {
     if (initialTimeSeconds === 0) return;
     if (currentTimeSeconds === 0) return <div>Time’s up!</div>;

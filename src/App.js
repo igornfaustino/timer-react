@@ -9,7 +9,14 @@ function App() {
   const [currentTimeSeconds, setCurrentTimeSeconds] = useState(0);
 
   const handleInput = useCallback((e) => {
-    const timeInMinutes = parseInt(e.target.value);
+    let { value } = e.target;
+    if (value === '') {
+      setInitialTimeSeconds(0);
+      setCurrentTimeSeconds(0);
+      return;
+    }
+    if (value > 59) value = '59';
+    const timeInMinutes = parseInt(value);
     const timeInSeconds = timeInMinutes * 60;
     setInitialTimeSeconds(timeInSeconds);
     setCurrentTimeSeconds(timeInSeconds);
