@@ -63,21 +63,21 @@ function App() {
         <button
           id="btn1x"
           onClick={() => setSpeed(1)}
-          className={speed === 1 && 'selected'}
+          className={speed === 1 ? 'selected' : undefined}
         >
           1x
         </button>
         <button
           id="btn1_5x"
           onClick={() => setSpeed(1.5)}
-          className={speed === 1.5 && 'selected'}
+          className={speed === 1.5 ? 'selected' : undefined}
         >
           1.5x
         </button>
         <button
           id="btn2x"
           onClick={() => setSpeed(2)}
-          className={speed === 2 && 'selected'}
+          className={speed === 2 ? 'selected' : undefined}
         >
           2x
         </button>
@@ -103,7 +103,7 @@ function App() {
 
   return (
     <div className="App">
-      <label for="minutes">Countdown: </label>
+      <label htmlFor="minutes">Countdown: </label>
       <input
         id="minutes"
         placeholder="(min)"
